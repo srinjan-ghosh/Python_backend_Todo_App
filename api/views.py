@@ -1,10 +1,12 @@
 # imports
 from flask import Blueprint, jsonify, request
+from flask_cors import CORS
 from .models import Todo
 from . import db
 from sqlalchemy import desc
 
 api = Blueprint('api', __name__)
+CORS(api)
 
 # ROUTES
 
