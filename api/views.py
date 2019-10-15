@@ -23,7 +23,7 @@ def add_todo():
     db.session.add(new_todo)
     db.session.commit()
 
-    return 'Todo Added', 201
+    return jsonify({"id": new_todo.id}), 201
 
 # -- GET ALL TODOS
 @api.route('/todos', methods=['GET'])
